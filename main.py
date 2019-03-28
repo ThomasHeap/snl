@@ -53,9 +53,9 @@ def run_experiment(args):
             ExperimentRunner(exp_desc).run(trial=0, sample_gt=False, rng=np.random.RandomState(42))
 
         except misc.AlreadyExistingExperiment:
-            print 'EXPERIMENT ALREADY EXISTS'
+            print('EXPERIMENT ALREADY EXISTS')
 
-    print 'ALL DONE'
+    print('ALL DONE')
 
 
 def run_trials(args):
@@ -83,9 +83,9 @@ def run_trials(args):
                 runner.run(trial=trial, sample_gt=True, rng=np.random)
 
             except misc.AlreadyExistingExperiment:
-                print 'EXPERIMENT ALREADY EXISTS'
+                print('EXPERIMENT ALREADY EXISTS')
 
-    print 'ALL DONE'
+    print('ALL DONE')
 
 
 def view_results(args):
@@ -103,7 +103,7 @@ def view_results(args):
             ExperimentViewer(exp_desc).view_results(trial=args.trial, block=args.block)
 
         except misc.NonExistentExperiment:
-            print 'EXPERIMENT DOES NOT EXIST'
+            print('EXPERIMENT DOES NOT EXIST')
 
     plt.show()
 
@@ -123,7 +123,7 @@ def print_log(args):
             ExperimentViewer(exp_desc).print_log()
 
         except misc.NonExistentExperiment:
-            print 'EXPERIMENT DOES NOT EXIST'
+            print('EXPERIMENT DOES NOT EXIST')
 
 
 def main():
